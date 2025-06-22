@@ -5,4 +5,8 @@ engine = create_engine(
 )
 with engine.connect() as conn:
   result = conn.execute(text("select * from jobs"))
+result1=result.all()
+
+
+
   

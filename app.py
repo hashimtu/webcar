@@ -1,18 +1,17 @@
 from flask import Flask, render_template, jsonify
-from sqlalchemy import text
-from database import result
+
+from database import result1
 
 app = Flask(__name__)
 
 
-def loadjobsfromdb():
-  for row in result:
-    return row
+
+
 
 
 @app.route('/')
 def hello_world():
-  return render_template('home.html', jobs=jobs)
+  return render_template('home.html', jobs=result1)
 
 
 @app.route('/jobs')
