@@ -1,16 +1,13 @@
 from flask import Flask, render_template, jsonify
 from sqlalchemy import text
-from database import engine
+from database import result
 
 app = Flask(__name__)
 
 
 def loadjobsfromdb():
-  with engine.connect() as conn:
-    result = conn.execute(text("select * from jobs"))
-    jobs = []
-    for row in result.all():
-    return jobs
+  for row in result:
+    return row
 
 
 @app.route('/')
