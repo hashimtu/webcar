@@ -1,14 +1,20 @@
-<div clas="mb=3">
-    <form>
+
+    <form action="/jobs/{{job['id']}}/apply" method="post">
       
-      <label for="full_name">Full Name:</label><br>
-      <input type="text" id="full_name"> 
+        
+      
+      <div> 
+        <label>Email:</label><br>
+        <input type="text" name="email">
         <br><br>
-      <label for="email">Email:</label><br>
-      <input type="email" id="email" name="email">
-      <br><br>
-      <label for="linkedin_url">LinkedIn URL:</label><br>
-      <input type="url" id="linkedin_url" 
+      </div>
+        <div>
+          <label>Full Name:</label><br>
+          <input type="text" name="full_name"><br>
+      </div> 
+      
+      
   <br>
+      <input type='submit'>
     </form>  
-</div>    
+   
