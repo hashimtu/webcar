@@ -18,4 +18,16 @@ def load_jobs_from_db(id):
         else:
             return dict(rows[0]._mapping)
     
+def add_application_to_db(job_id, data):
+    with engine.connect() as conn:
+        query= (text("INSERT INTO hashim(job_id, full_name, email) VALUES (:job_id, :full_name, :email)"))
+        conn.execute(query, {'job_id':job_id,'full_name': data['full_name'], 'email': data['email']})
+        conn.commit()
+        
+
+
+        
+
+
+        
         
