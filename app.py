@@ -34,3 +34,4 @@ if __name__ == '__main__':
 #how to move between version in github or vs code
 #how jsonify
 #how to know the other databases connection strings
+#replit $  render heroku ansible cc/cd kubernetes
